@@ -30,8 +30,7 @@ function! ale#fixers#clangtidy#GetCommand(buffer) abort
     let l:checks = join(ale#fixers#clangtidy#Var(a:buffer, 'checks'), ',')
     let l:extra_options = ale#fixers#clangtidy#Var(a:buffer, 'extra_options')
     let l:build_dir = ale#c#GetBuildDirectory(a:buffer)
-    let l:options = empty(l:build_dir)
-    \   ? ale#fixers#clangtidy#Var(a:buffer, 'options') : ''
+    let l:options = ale#fixers#clangtidy#Var(a:buffer, 'options')
     let l:fix_errors = ale#fixers#clangtidy#Var(a:buffer, 'fix_errors')
 
     return ' -fix' . (l:fix_errors ? ' -fix-errors' : '')
