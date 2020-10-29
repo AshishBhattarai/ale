@@ -2,6 +2,8 @@
 " Description: This file implements debugging information for ALE
 
 let s:global_variable_list = [
+\    'ale_c_build_dir',
+\    'ale_cpp_build_dir',
 \    'ale_cache_executable_check_failures',
 \    'ale_change_sign_column_color',
 \    'ale_command_wrapper',
